@@ -84,8 +84,17 @@ MyPCA is a Python class that speeds up the PCA implementation in case you need t
                            c=target.values, 
                            cmap='Set3')
 
+      ax.set_xlabel(PCx, fontsize=20)
+      ax.set_ylabel(PCy, fontsize=20)
+      ax.set_title('Biplot', fontsize=20)
+
+      ax.legend(*scatter.legend_elements(), loc="lower left", title=f"{target.name}")
   ```
 
-To implement myPCA
+To implement myPCA in your code you can easily download the [myPCA.py](https://github.com/CheckSim/myPCA/blob/main/myPCA.py) file and import in your notebook with:
 
-[Dataset](https://www.kaggle.com/datasets/alexandrepetit881234/fake-bills)
+```Python
+from cf_matrix import *
+```
+
+Here there is the [Jupyter Notebook Example](https://github.com/CheckSim/myPCA/blob/main/pca-test-portfolio.ipynb)
