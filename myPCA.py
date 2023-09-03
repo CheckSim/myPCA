@@ -66,3 +66,11 @@ class myPCA:
                              self.scores[PCy].values / (self.scores[PCy].max() - self.scores[PCy].min()), 
                              c=target.values, 
                              cmap='Set3')
+        
+        ax.set_xlabel(PCx, fontsize=20)
+        ax.set_ylabel(PCy, fontsize=20)
+        ax.set_title('Biplot', fontsize=20)
+
+        ax.legend(*scatter.legend_elements(),
+                            loc="lower left", 
+                            title=f"{target.name}")
